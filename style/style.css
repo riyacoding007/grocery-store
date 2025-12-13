@@ -1,0 +1,185 @@
+/* --- Global Styles & Reset --- */
+:root {
+    --primary-color: #007bff; /* Example: A strong brand color */
+    --secondary-color: #28a745; /* Example: A fresh green for food */
+    --dark-bg: #343a40;
+    --light-bg: #f8f9fa;
+    --text-color: #333;
+    --font-stack: 'Poppins', 'Noto Sans Devanagari', sans-serif;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-stack);
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* --- Utility Classes --- */
+.primary-cta, .secondary-cta {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.primary-cta {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+}
+
+.secondary-cta {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+/* --- Header & Navigation --- */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: sticky; /* For fixed navigation */
+    top: 0;
+    z-index: 1000;
+}
+
+.main-header nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+/* Ensure the menu toggle is hidden on desktop */
+.menu-toggle {
+    display: none;
+}
+/* --- Section Layouts --- */
+.content-section {
+    padding: 80px 5%; /* Generous padding for the "Wix" clean look */
+    max-width: 1200px; /* Limits width on big screens */
+    margin: 0 auto;
+    text-align: center;
+}
+
+.light-bg { background-color: var(--light-bg); }
+.dark-bg { 
+    background-color: var(--dark-bg); 
+    color: white; 
+}
+.dark-bg h2, .dark-bg p, .dark-bg ul li { color: white; }
+
+/* --- Hero Section --- */
+.hero-section {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* background: url('assets/images/BgGupta.jpg') no-repeat center center/cover; */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Black overlay for text readability */
+                url('../assets/images/BgGupta.jpg') no-repeat center center/cover;
+    
+    color: white; /* Ensure text is white against the dark background */
+    padding: 100px 5%;
+}
+
+.hero-section h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+/* --- Card Grid (Retail Offers) --- */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.offer-card {
+    padding: 25px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.offer-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+/* --- Two-Column Layout (Distribution) --- */
+.two-col-layout {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.col-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+/* ---  Mobile Responsiveness (Media Query) --- */
+@media (max-width: 768px) {
+    /* 1. Hide the desktop navigation */
+    .main-header nav {
+        display: none;
+        /* When active class is added by JS, it will show */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 70px; /* Below the header */
+        left: 0;
+        background-color: white;
+        padding: 20px 0;
+        border-top: 1px solid #eee;
+    }
+    
+    .main-header nav.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block; /* Show the hamburger icon */
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+    .hero-section {
+        /* padding: 80px 5%; */
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Black overlay for text readability */
+                url('../assets/images/BgGupta.jpg') no-repeat right center/cover;
+    }
+    /* 2. Adjust main content sizing */
+    .hero-section h1 {
+        font-size: 2em;
+    }
+
+    /* 3. Stack two-column sections vertically */
+    .two-col-layout {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+

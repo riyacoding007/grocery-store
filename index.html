@@ -1,198 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Gupta Corner</title>
-
-<style>
-    :root {
-    /* --- Brand Colors --- */
-    --color-primary: #800000;      /* Deep Maroon/Burgundy for Trust/Tradition */
-    --color-secondary: #4CAF50;    /* Fresh Green for Freshness/CTAs */
-    --color-accent: #FFB300;       /* Deep Gold/Orange for Warmth/Highlights */
-
-    /* --- Neutral/Utility Colors --- */
-    --color-background: #F5F5F5;   /* Off-White/Light Gray for Main Background */
-    --color-text-dark: #333333;    /* Near-Black for main body text (High Contrast) */
-    --color-text-light: #FFFFFF;   /* Pure White for text on dark backgrounds */
-    --color-border: #CCCCCC;       /* Light Gray for borders and dividers */
-}
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, sans-serif;
-    }
-
-    body {
-        background-color: var(--color-background);
-
-        color: var(--color-text-dark);
-    }
-
-    header {
-        width: 100%;
-        padding: 15px 40px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background: white;
-        /* background-color: #F5F5F5; */
-        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        position: sticky;
-        top: 0;
-    }
-
-    header img {
-        height: 60px;
-    }
-    nav ul {
-        display: flex;
-        gap: 25px;
-        list-style: none;
-    }
-
-    nav a {
-        text-decoration: none;
-        font-weight: 600;
-        color: #333;
-    }
-
-    /* Hero Section */
-    .hero {
-        height: 85vh;
-        background: url("assets/BgGupta.jpg") center/cover no-repeat;
-        /* opacity: 0.9; */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 40px;
-        position: relative;
-    }
-
-    .hero::after {
-        content: "background";
-        position: absolute;
-        top: 0; left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0,0,0,0.3);
-    }
-
-    .hero-content {
-        position: relative;
-        text-align: center;
-        color: white;
-        max-width: 650px;
-    }
-
-    .hero-content h1 {
-        font-size: 3rem;
-        margin-bottom: 20px;
-        font-weight: 700;
-        /* text-shadow: 2px 2px 8px rgba(0,0,0,0.7); */
-    }
-
-    .hero-content p {
-        font-size: 1.2rem;
-        margin-bottom: 30px;
-        /* text-shadow: 1px 1px 4px rgba(0,0,0,0.7); */
-    }
-
-    .hero-content button {
-        padding: 12px 25px;
-        border: none;
-        /* background: #ff4d4d; */
-        background: #800000;
-        color: white;
-        font-size: 1rem;
-        border-radius: 6px;
-        cursor: pointer;
-    }
-
-    /* Services Section */
-    .section {
-        padding: 60px 40px;
-        text-align: center;
-    }
-
-    .services {
-        display: flex;
-        justify-content: center;
-        gap: 25px;
-        flex-wrap: wrap;
-    }
-
-    .service-card {
-        background: white;
-        width: 260px;
-        padding: 25px;
-        border-radius: 10px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    footer {
-        background: #222;
-        color: #ccc;
-        text-align: center;
-        padding: 20px 10px;
-        margin-top: 40px;
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Grocery Store Name | Retail & Distribution</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<header>
-    <img src="assets/logoGuptaCorner.jpg" alt="Gupta Corner Logo" />
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Offers</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+    <header class="main-header">
+        <div class="logo"><img src="assets/images/logoGUptaCorner-removebg-preview.png" alt="Gupta Corner Logo" height="40"></div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#retail-offers">Weekly Offers</a>
+            <a href="#distribution">Distribution</a>
+            <a href="#about">About Us</a>
+            <a href="#contact" class="cta-button">Contact Us</a>
+        </nav>
+        <button class="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+    </header>
 
-<section class="hero">
-    <div class="hero-content">
-        <h1>Welcome to Gupta Corner</h1>
-        <p>Your trusted place for both retail and distribution. Quality products every time.</p>
-        <button id="shopNow">Shop Now</button>
-    </div>
-</section>
+    <main>
+        <section id="home" class="hero-section">
+            <h1>Freshness Quality Delivered</h1>
+            <p>Your trusted local retailer and reliable distribution partner for premium produce and pantry essentials.</p>
+            <a href="#distribution" class="primary-cta">Partner With Us</a>
+        </section>
 
-<section class="section">
-    <h2>Our Services</h2>
-    <div class="services">
-        <div class="service-card">
-            <h3>Retail</h3>
-            <p>Wide range of products for everyday use.</p>
-        </div>
-        <div class="service-card">
-            <h3>Wholesale</h3>
-            <p>Bulk distribution with trusted quality.</p>
-        </div>
-        <div class="service-card">
-            <h3>Local Delivery</h3>
-            <p>Fast and convenient delivery around your area.</p>
-        </div>
-    </div>
-</section>
+        <section id="retail-offers" class="content-section light-bg">
+            <h2>Current Weekly Specials</h2>
+            <div class="card-grid">
+                <div class="offer-card">
+                    <img src="placeholder-produce.jpg" alt="Produce offer">
+                    <h3>50% Off Seasonal Produce</h3>
+                    <p>The freshest fruits and vegetables available at unbeatable prices this week only.</p>
+                </div>
+                </div>
+        </section>
 
-<footer>
-    © 2025 Gupta Corner. All rights reserved.
-</footer>
+        <section id="distribution" class="content-section dark-bg">
+            <div class="two-col-layout">
+                <div class="col-text">
+                    <h2>Wholesale & Distribution Partnership</h2>
+                    <p>We provide reliable, cold-chain logistics and bulk supply for restaurants, cafes, and businesses.</p>
+                    <ul>
+                        <li><span class="icon">✓</span> Next-day Delivery</li>
+                        <li><span class="icon">✓</span> Quality Guarantee</li>
+                        <li><span class="icon">✓</span> Custom Ordering</li>
+                    </ul>
+                    <a href="#contact" class="secondary-cta">Inquire About Bulk Orders</a>
+                </div>
+                <div class="col-image">
+                    <img src="placeholder-warehouse.jpg" alt="Warehouse/Logistics">
+                </div>
+            </div>
+        </section>
 
-<script>
-    const btn = document.getElementById("shopNow");
+        <section id="about" class="content-section">
+            <h2>Our Story & Commitment</h2>
+            <p class="summary-text">From our family farm to your plate, we've been committed to sustainable sourcing and unbeatable quality for three generations. Learn more about what makes YourStore the best choice.</p>
+        </section>
 
-    btn.addEventListener("click", () => {
-        alert("Shop page coming soon. Chill.");
-    });
-</script>
+        <section id="contact" class="content-section light-bg">
+            <h2>Get In Touch</h2>
+            <div class="contact-info">
+                <p>Retail Location: [Address]</p>
+                <p>Distribution Office: [Phone Number] | [Email]</p>
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <textarea placeholder="Your Message or Inquiry"></textarea>
+                <button type="submit" class="primary-cta">Send Message</button>
+            </form>
+        </section>
+    </main>
 
+    <footer>
+        <p>&copy; 2000-2025 Gupta Corner. All Rights Reserved.</p>
+        </footer>
+
+    <script src="script/script.js"></script>
 </body>
 </html>
