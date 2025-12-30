@@ -6,77 +6,288 @@
     <title>Your Grocery Store Name | Retail & Distribution</title>
     <link rel="stylesheet" href="style/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+  <div class="site-loader" id="site-loader">
+  <svg viewBox="0 0 500 180" aria-label="Gupta Corner Loading">
+    <text x="50%" y="50%" dy=".35em" text-anchor="middle" class="loader-text">
+      Gupta Corner
+    </text>
+  </svg>
+</div>
 
+
+
+
+    <!-- header -->
     <header class="main-header">
-        <div class="logo"><img src="assets/images/logoGUptaCorner-removebg-preview.png" alt="Gupta Corner Logo" height="40"></div>
-        <nav>
+        <div class="logo"><img src="assets/images/logoGuptaCorner.png" alt="Gupta Corner Logo" height="40">
+        <span class="logo-text">Gupta Corner</span></div>
+        <nav class="navbar">
             <a href="#home">Home</a>
-            <a href="#retail-offers">Weekly Offers</a>
-            <a href="#distribution">Distribution</a>
+            <a href="#services">Services</a>
+            <a href="#retail-outlets">Retail Outlets</a>
             <a href="#about">About Us</a>
             <a href="#contact" class="cta-button">Contact Us</a>
         </nav>
-        <button class="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+        <!-- <button class="menu-toggle" aria-label="Toggle navigation menu">☰</button> -->
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+
     </header>
 
     <main>
+        <!-- home page  -->
         <section id="home" class="hero-section">
-            <h1>Freshness Quality Delivered</h1>
-            <p>Your trusted local retailer and reliable distribution partner for premium produce and pantry essentials.</p>
-            <a href="#distribution" class="primary-cta">Partner With Us</a>
+            <div class="hero-content">
+            <h1>Your Local Grocery Store & Trusted Supplier</h1>
+            <p>Serving local families and nearby businesses with quality products and fair prices.</p>
+            <div class="homepage-cta">
+                <a href="#contact" class="btn-primary">Contact Us</a>
+                <a href="#retail-outlets" class="btn-secondary retail">Visit Retail Outlet</a>
+            </div>
+            </div>
+            <div class="hero-image">
+    <img src="assets/images/home-img02.png" alt="Retail Bag">
+  </div>
         </section>
 
-        <section id="retail-offers" class="content-section light-bg">
-            <h2>Current Weekly Specials</h2>
-            <div class="card-grid">
-                <div class="offer-card">
-                    <img src="placeholder-produce.jpg" alt="Produce offer">
-                    <h3>50% Off Seasonal Produce</h3>
-                    <p>The freshest fruits and vegetables available at unbeatable prices this week only.</p>
-                </div>
-                </div>
-        </section>
 
-        <section id="distribution" class="content-section dark-bg">
-            <div class="two-col-layout">
-                <div class="col-text">
-                    <h2>Wholesale & Distribution Partnership</h2>
-                    <p>We provide reliable, cold-chain logistics and bulk supply for restaurants, cafes, and businesses.</p>
-                    <ul>
-                        <li><span class="icon">✓</span> Next-day Delivery</li>
-                        <li><span class="icon">✓</span> Quality Guarantee</li>
-                        <li><span class="icon">✓</span> Custom Ordering</li>
-                    </ul>
-                    <a href="#contact" class="secondary-cta">Inquire About Bulk Orders</a>
-                </div>
-                <div class="col-image">
-                    <img src="placeholder-warehouse.jpg" alt="Warehouse/Logistics">
-                </div>
+        <!-- brands trust scrool ticket -->
+        <div class="logo-ticker">   
+  <div class="logo-track">
+    <div class="logo-circle"><img src="assets/images/brand-logos/nestle.png" alt="Nestle"></div>
+    <div class="logo-circle"><img src="assets/images/brand-logos/amul.png" alt="Amul"></div>
+    <div class="logo-circle"><img src="assets/images/brand-logos/balaji.png" alt="Balaji"></div>
+    <div class="logo-circle"><img src="assets/images/brand-logos/cadbury.png" alt="Cadbury"></div>
+    <div class="logo-circle"><img src="assets/images/brand-logos/haldiram.png" alt="Haldiram"></div>
+    <div class="logo-circle"><img src="assets/images/brand-logos/dove.png" alt="Dove"></div>
+    <div class="logo-circle"><img src="assets/images/brand-logos/maggie.png" alt="Maggie"></div>
+    <div class="logo-circle"><img src="assets/images/brand-logos/dettol.png" alt="Dettol"></div>
+    <div class="logo-circle"><img src="assets/images/brand-logos/dabur.png" alt="Dabur"></div>
+    <div class="logo-circle"><img src="assets/images/brand-logos/fortune.png" alt="Fortune"></div>
+    <div class="logo-circle"><img src="assets/images/brand-logos/cocacola.png" alt="Cocacola"></div>
+        <div class="logo-circle"><img src="assets/images/brand-logos/nestle.png" alt="Nestle"></div>
+    <div class="logo-circle"><img src="assets/images/brand-logos/amul.png" alt="Amul"></div>
+    <div class="logo-circle"><img src="assets/images/brand-logos/balaji.png" alt="Balaji"></div>
+    <div class="logo-circle"><img src="assets/images/brand-logos/cadbury.png" alt="Cadbury"></div>
+    <div class="logo-circle"><img src="assets/images/brand-logos/haldiram.png" alt="Haldiram"></div>
+    <div class="logo-circle"><img src="assets/images/brand-logos/dove.png" alt="Dove"></div>
+    <div class="logo-circle"><img src="assets/images/brand-logos/maggie.png" alt="Maggie"></div>
+    <div class="logo-circle"><img src="assets/images/brand-logos/dettol.png" alt="Dettol"></div>
+    <div class="logo-circle"><img src="assets/images/brand-logos/dabur.png" alt="Dabur"></div>
+    <div class="logo-circle"><img src="assets/images/brand-logos/fortune.png" alt="Fortune"></div>
+    <div class="logo-circle"><img src="assets/images/brand-logos/cocacola.png" alt="Cocacola"></div>
+  </div>
+</div>
+
+
+        <!-- services section  -->
+        <section id="services" class="services section">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-card">
+            <div class="service-item card">
+                <i class="fa-solid fa-shopping-basket card-icon"></i>
+                <h3 class="card-title">Retail Store</h3>
+                <ul class="card-text">
+                    <li>Walk-in purchases</li>
+                    <li>Daily household groceries</li>
+                    <li>Fair local pricing</li>
+                </ul>
+            </div>
+
+            <div class="service-item card">
+                <i class="fa-solid fa-truck-fast card-icon"></i>
+                <h3 class="card-title">Shop Supply</h3>
+                <ul class="card-text">
+                    <li>Bulk orders</li>
+                    <li>Nearby shops and vendors</li>
+                    <li>Reliable stock availability</li>
+                </ul>
+            </div>
+
+                  <div class="service-item card">
+        <i class="fa-solid fa-handshake card-icon"></i>
+        <h3 class="card-title">Local trust</h3>
+        <ul class="card-text">
+        <li>Long-term relationships with customers and shop owners.</li>
+        </ul>
+      </div> 
             </div>
         </section>
 
-        <section id="about" class="content-section">
-            <h2>Our Story & Commitment</h2>
-            <p class="summary-text">From our family farm to your plate, we've been committed to sustainable sourcing and unbeatable quality for three generations. Learn more about what makes YourStore the best choice.</p>
-        </section>
 
-        <section id="contact" class="content-section light-bg">
-            <h2>Get In Touch</h2>
-            <div class="contact-info">
-                <p>Retail Location: [Address]</p>
-                <p>Distribution Office: [Phone Number] | [Email]</p>
-            </div>
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name">
-                <input type="email" placeholder="Your Email">
-                <textarea placeholder="Your Message or Inquiry"></textarea>
-                <button type="submit" class="primary-cta">Send Message</button>
-            </form>
-        </section>
+<!-- what we sell -->
+        <section class="section store-range-section">
+  <div class="store-range-container">
+    <h2 class="section-title">Our In-Store Range</h2>
+
+    <p class="store-range-subtitle">
+      A complete selection of daily-use groceries and essentials,
+      stocked for households and nearby shops.
+    </p>
+
+    <div class="store-range-grid">
+
+      <div class="store-range-item">
+        <i class="fa-solid fa-scale-balanced"></i>
+        <span>Staple Foods</span>
+        <small>Rice, wheat flour, pulses, grains</small>
+      </div>
+
+      <div class="store-range-item">
+        <i class="fa-solid fa-droplet"></i>
+        <span>Cooking Essentials</span>
+        <small>Edible oils, ghee, basic condiments</small>
+      </div>
+
+      <div class="store-range-item">
+        <i class="fa-solid fa-box"></i>
+        <span>Packaged Goods</span>
+        <small>Snacks, biscuits, ready-to-use items</small>
+      </div>
+
+      <div class="store-range-item">
+        <i class="fa-solid fa-broom"></i>
+        <span>Daily-Use Products</span>
+        <small>Cleaning and household essentials</small>
+      </div>
+
+      <div class="store-range-item">
+        <i class="fa-solid fa-store"></i>
+        <span>Retail & Bulk Availability</span>
+        <small>Walk-in retail and bulk supply options</small>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- about section  -->
+        <section id="about" class="section about-section">
+  <div class="about-container">
+    <h2 class="section-title">About Gupta Corner</h2>
+<div class="about-highlights">
+  <div class="about-image">
+    <img src="assets/images/BgGupta.jpg" alt="Gupta Corner Store">
+  </div>
+
+  <div class="about-content">
+    <p>
+      Founded in 2000, Gupta Corner is a family-run grocery store serving local
+      households and nearby shops with dependable supply and honest pricing.
+    </p>
+
+    <p>
+      What started as a small retail outlet has grown through trust,
+      consistency, and long-standing relationships with the community.
+    </p>
+  </div>
+</div>
+  </div>
+</section>
+
+
+<!-- retail outlets  -->
+        <section id="retail-outlets" class="section retail-section">
+  <div class="retail-container">
+
+    <h2 class="section-title">Our Retail Outlet</h2>
+
+    <div class="retail-grid">
+
+      <!-- Google Map -->
+      <div class="retail-map">
+        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235.58598250968646!2d72.8963755076721!3d19.135024051038105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7ff0678af91%3A0x10e1b51127e19b0b!2sGupta%20Kirana%20Store!5e0!3m2!1sen!2sin!4v1767095410482!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235.58598250968646!2d72.8963755076721!3d19.135024051038105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7ff0678af91%3A0x10e1b51127e19b0b!2sGupta%20Kirana%20Store!5e0!3m2!1sen!2sin!4v1767095410482!5m2!1sen!2sin"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <!-- Outlet Info -->
+      <div class="retail-info">
+        <h3>Visit Our Store</h3>
+
+        <ul class="retail-details">
+          <li>
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Gupta Corner, [Full Address, Area Name]</span>
+          </li>
+
+          <li>
+            <i class="fa-solid fa-clock"></i>
+            <span>Open Daily: 8:00 AM – 10:00 PM</span>
+          </li>
+
+          <li>
+            <i class="fa-solid fa-phone"></i>
+            <span>+91 XXXXX XXXXX</span>
+          </li>
+        </ul>
+               <div class="retail-btn"> <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235.58598250968646!2d72.8963755076721!3d19.135024051038105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7ff0678af91%3A0x10e1b51127e19b0b!2sGupta%20Kirana%20Store!5e0!3m2!1sen!2sin!4v1767095410482!5m2!1sen!2sin" class="btn-primary">Get directions</a>
+        <a href="#contact" class="btn-secondary">Enquire</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- contact us section  -->
+
+        <section id="contact" class="section contact-section">
+  <div class="contact-container">
+    <h2 class="section-title">Contact Us</h2>
+
+    <div class="contact-grid">
+      
+      <div class="contact-details">
+        <div class="contact-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Gupta Corner, [Full Address Here]</p>
+        </div>
+
+        <div class="contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <p>+91 XXXXX XXXXX</p>
+        </div>
+
+        <div class="contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <p>guptacorner@email.com</p>
+        </div>
+
+        <div class="contact-item">
+          <i class="fa-solid fa-clock"></i>
+          <p>Open Daily: 8:00 AM – 10:00 PM</p>
+        </div>
+      </div>
+
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="tel" placeholder="Phone Number" required>
+        <textarea placeholder="Message / Wholesale Inquiry"></textarea>
+        <button type="submit" class="btn-primary">Send Message</button>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+
     </main>
 
+    <!-- footer -->
     <footer>
         <p>&copy; 2000-2025 Gupta Corner. All Rights Reserved.</p>
         </footer>

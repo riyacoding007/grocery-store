@@ -15,12 +15,51 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// 2. Mobile Navigation Toggle
-const menuToggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('nav');
 
-menuToggle.addEventListener('click', () => {
-    nav.classList.toggle('active');
+const menuToggle = document.getElementById("menu-toggle");
+const nav = document.querySelector(".navbar");
+const root = document.documentElement;
+
+menuToggle.addEventListener("click", () => {
+  root.classList.toggle("menu-open");
 });
 
-// (You'd need to add CSS media queries for the mobile menu to work visually)
+// Close menu when a nav link is clicked
+document.querySelectorAll(".navbar a").forEach(link => {
+  link.addEventListener("click", () => {
+    root.classList.remove("menu-open");
+  });
+});
+
+
+
+// Site Loader
+// window.addEventListener("load", () => {
+//   const loader = document.getElementById("site-loader");
+//   loader.classList.add("hidden");
+// });
+
+const loader = document.getElementById("site-loader");
+
+const MIN_LOADER_TIME = 3200; // must match animation duration
+let pageLoaded = false;
+let minTimePassed = false;
+
+// Page load flag
+window.addEventListener("load", () => {
+  pageLoaded = true;
+  tryHideLoader();
+});
+
+// Minimum animation time
+setTimeout(() => {
+  minTimePassed = true;
+  tryHideLoader();
+}, MIN_LOADER_TIME);
+
+// Hide only when BOTH conditions are true
+function tryHideLoader() {
+  if (pageLoaded && minTimePassed) {
+    loader.classList.add("hidden");
+  }
+}
